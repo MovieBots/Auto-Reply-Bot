@@ -37,7 +37,6 @@ class Bot(Client):
         temp_utils.ME = me.id
         temp_utils.USER_NAME = me.username
         temp_utils.BOT_NAME = me.first_name
-        self.username = '@' + me.username
         logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
         tz = pytz.timezone('Asia/Kolkata')
         today = date.today()
