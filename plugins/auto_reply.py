@@ -17,6 +17,7 @@ async def auto_reply(bot, message):
 
 @Arpitbotmovies
 @Arpitbotmovies''', reply_to_message_id=message.id)
+            await asyncio.sleep(2)
         except FloodWait as e:
             logger.warning(f"Got FloodWait.\n\nWaiting for {e.value} seconds.")
             await asyncio.sleep(e.value + 2)
