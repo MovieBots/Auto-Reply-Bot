@@ -11,11 +11,11 @@ def is_enabled(value, default):
         return default
 
 SESSION = environ.get("SESSION", "N2 Auto Reply Bot")
-API_ID = 27732327
-API_HASH = "7c7c0a2b3b5dc1eb6b84433228dcf4c8"
-USER_SESSION = environ.get("USER_SESSION", "1BVtsOMEBu3r_GZNdlzumpqLa_AcRrOZDrimwsuGLcf8tOQ6S4aaXyR7wOMYZzwmdxEA5a4gwpx80j2ddflmXyTP6W12Ij_NCPEAyP0NtG3pVooCB_CBiVIbCs5mzS37lmb_XvqlLL6gzTG-O4TIo-KCrN74kWv4D96g42T3xsampdWEbBK-XwVn-eHtL-wp4xHKyFE7DCaLSkxcUEZ7h_rdNbV6VjumObO7KWD2hgLNCllsiFLI2kW1jZaZ0kKrhHh_b--S7TGwJrQPhG4bp7c6TKzaP593lG0ts3jlphYIvhpKwAX-uTsdEVEnBfZ4-ssybI0viY3EHtaSOpsOfkL7wABwnTRs=")
+API_ID = 29236719
+API_HASH = "1ccf1bd0a86af974e3210a55f662c062"
+USER_SESSION = environ.get("USER_SESSION", "1BVtsOMEBu2I5WvSpxWG9nE6eM1WQHJ5q50D4XVIqd7-3vpI49sxR6yZfWNURzs4d6mjhJ2W41VR_Jo_nXSJJX69_N9WHv9OdjOUbtTciBs7BtcyKqMPO3eXGiWKml8hQ-u0SxFnXcQN_3XN9dvu4vChNjLM5h2YjaAcrYePhlQOZ2O3UJwnv9shC5wJuSxOxpM1w5e8pP5ltk7SbB2uEi5MetaXHvP90hK7MSR8Rp0qzvtZ1hLccgrxux33_P-AVPGobKLZLbVuVU4ZxSnX53jo8S_sKt1di32ovt-xvY-T5XhPrTNIPK3MFdud4Y3eYsEDlOcMFoBfOjObeIKt7Q457-m0Gg4M=")
 LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002074744533"))
 FROM_GRP = [int(channel_id) for channel_id in environ.get('FROM_GRP', '-1002216169351 -1002162221322').split() if re.match(r'^-?\d+$', channel_id)]
 PORT = int(environ.get("PORT", "8080"))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7870979920').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '893383574').split()]
 UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "https://github.com/MovieBots/Auto-Reply-Bot")
