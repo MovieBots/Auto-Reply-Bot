@@ -11,8 +11,8 @@ def is_enabled(value, default):
         return default
 
 SESSION = environ.get("SESSION", "N2 Auto Reply Bot")
-API_ID = 27732327
-API_HASH = "7c7c0a2b3b5dc1eb6b84433228dcf4c8"
+API_ID = 29059899
+API_HASH = "bd85b34cbd5a5fd10f34b8df1b11f89a"
 USER_SESSION = environ.get("USER_SESSION", "")
 LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002074744533"))
 FROM_GRP = [int(channel_id) for channel_id in environ.get('FROM_GRP', '-1002216169351 -1002162221322 -1001619702173').split() if re.match(r'^-?\d+$', channel_id)]
