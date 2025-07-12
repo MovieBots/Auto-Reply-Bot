@@ -11,11 +11,11 @@ def is_enabled(value, default):
         return default
 
 SESSION = environ.get("SESSION", "N2 Auto Reply Bot")
-API_ID = 28813019
-API_HASH = "cc02b3685457d3109515657346ed5cfd"
+API_ID = 22954034
+API_HASH = "5b9c279aa977889a73a6aea3168a6a2b"
 USER_SESSION = environ.get("USER_SESSION", "")
 LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002074744533"))
 FROM_GRP = [int(channel_id) for channel_id in environ.get('FROM_GRP', '-1002216169351').split() if re.match(r'^-?\d+$', channel_id)]
 PORT = int(environ.get("PORT", "8080"))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7908554280').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7582905564').split()]
 UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "https://github.com/MovieBots/Auto-Reply-Bot")
