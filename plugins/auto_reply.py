@@ -15,8 +15,8 @@ async def auto_reply(bot, message):
         try:
             await message.reply_text('''Meri Profile Pr Jaao Wahan Movie Search Group Hai Wahan Movie Search Kro Free me No Ads Join And Enjoy..
 
-@Arpitbotmovies
-@Arpitbotmovies''', reply_to_message_id=message.id)
+
+''', reply_to_message_id=message.id)
             await asyncio.sleep(2)
         except FloodWait as e:
             logger.warning(f"Got FloodWait.\n\nWaiting for {e.value} seconds.")
