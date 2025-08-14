@@ -25,7 +25,7 @@ async def auto_reply(bot, message):
             logger.info("Floodwait ended")
 
     try:
-        await asyncio.sleep(3600)
+        await asyncio.sleep(17)
         await reply.delete()
     except:
         pass
