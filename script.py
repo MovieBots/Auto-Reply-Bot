@@ -9,4 +9,4 @@ class scripts(object):
 
     START_TXT = """
 <b>Hᴇʟʟᴏ {},
-Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, I'm Just A Private Auto Reply Bot Made By <a href='t.me/Spider_Man_02'>Naman</a>.</b>"""
+Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, I'm Just A Private Auto Reply Bot Made By <a href='t.me/Arpitbotmovies'>ARPIT</a>.</b>"""
