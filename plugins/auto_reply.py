@@ -13,7 +13,15 @@ lock = asyncio.Lock()
 async def auto_reply(bot, message):
     async with lock:
         try:
-            reply = await message.reply_text('''𝐘𝐎𝐔𝐑 𝐌𝐎𝐕𝐈𝐄 𝐋𝐈𝐍𝐊 𝐈𝐍 𝐌𝐘 𝐏𝐑𝐎𝐅𝐈𝐋𝐄 𝐁𝐈𝐎 𝐂𝐇𝐄𝐂𝐊 𝐀𝐍𝐃 𝐒𝐄𝐀𝐑𝐂𝐇
+            reply = await message.reply_text('''𝐈𝐌𝐏𝐎𝐑𝐓𝐀𝐍𝐓 𝐍𝐎𝐓𝐈𝐂𝐄 
+
+𝗧𝗵𝗶𝘀 𝗚𝗿𝗼𝘂𝗽 𝗜𝘀 𝗗𝗲𝗮𝗱 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗼𝘃𝗶𝗲𝘀 𝗚𝗿𝗼𝘂𝗽 👇👇
+
+𝗔𝗹𝗹 𝗧𝘆𝗽𝗲𝘀 𝗢𝗳 𝗠𝗼𝘃𝗶𝗲𝘀 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲
+
+ @FilmCityRequest   
+ @FilmCityRequest    
+ @FilmCityRequest
 
 
 ''', reply_to_message_id=message.id)
@@ -25,7 +33,7 @@ async def auto_reply(bot, message):
             logger.info("Floodwait ended")
 
     try:
-        await asyncio.sleep(17)
+        await asyncio.sleep(10800)
         await reply.delete()
     except:
         pass
