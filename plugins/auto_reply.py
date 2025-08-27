@@ -19,9 +19,9 @@ async def auto_reply(bot, message):
 
 𝗔𝗹𝗹 𝗧𝘆𝗽𝗲𝘀 𝗢𝗳 𝗠𝗼𝘃𝗶𝗲𝘀 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲
 
- @MovieJunctionGroups   
- @MovieJunctionGroups    
- @MovieJunctionGroups
+ @FilmCityMoviesRequest   
+ @FilmCityMoviesRequest    
+ @FilmCityMoviesRequest
 
 
 ''', reply_to_message_id=message.id)
