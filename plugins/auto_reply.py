@@ -13,15 +13,7 @@ lock = asyncio.Lock()
 async def auto_reply(bot, message):
     async with lock:
         try:
-            reply = await message.reply_text('''𝐈𝐌𝐏𝐎𝐑𝐓𝐀𝐍𝐓 𝐍𝐎𝐓𝐈𝐂𝐄 
-
-𝗧𝗵𝗶𝘀 𝗚𝗿𝗼𝘂𝗽 𝗜𝘀 𝗗𝗲𝗮𝗱 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗼𝘃𝗶𝗲𝘀 𝗚𝗿𝗼𝘂𝗽 👇👇
-
-𝗔𝗹𝗹 𝗧𝘆𝗽𝗲𝘀 𝗢𝗳 𝗠𝗼𝘃𝗶𝗲𝘀 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲
-
- @FilmCityMoviesRequest   
- @FilmCityMoviesRequest    
- @FilmCityMoviesRequest
+            reply = await message.reply_text('''Yₒᵤᵣ ₘₒᵥᵢₑ ᵢₛ ᵢₙ ₘy ₚᵣₒfᵢₗₑ ₚₗₑₐₛₑ Cₕₑcₖ ₘy Bᵢₒ
 
 
 ''', reply_to_message_id=message.id)
