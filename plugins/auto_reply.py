@@ -9,24 +9,36 @@ logger.setLevel(logging.INFO)
 
 lock = asyncio.Lock()
 
-@Client.on_message(filters.chat(FROM_GRP) & ~filters.bot)
-async def auto_reply(bot, message):
-    async with lock:
-        try:
-            reply = await message.reply_text('''ʏօʊʀ ʍօʋɨɛ ɨռ ʍʏ քʀօʄɨʟɛ քʟɛǟֆɛ ƈɦɛƈӄ
+import asyncio
+from pyrogram import Client, filters
 
+AUTO_REPLY_TEXT = "ʏօʊʀ ʍօʋɨɛ ɨռ ʍʏ քʀօʄɨʟɛ քʟɛǟֆɛ ƈɦɛƈӄ"
 
-''', reply_to_message_id=message.id)
+@Client.on_message(filters.group)
+async def auto_reply(client, message):
 
-            await asyncio.sleep(2)
-        except FloodWait as e:
-            logger.warning(f"Got FloodWait.\n\nWaiting for {e.value} seconds.")
-            await asyncio.sleep(e.value + 2)
-            logger.info("Floodwait ended")
+    if not message.from_user:
+        return
 
-    try:
-        await asyncio.sleep(10)
-        await reply.delete()
+    me = await client.get_me()
+
+    # Ignore your own messages
+    if message.from_user.id == me.id:
+        return
+
+    # Ignore outgoing messages (line se bheja hua msg)
+    if message.outgoing:
+        return
+
+    # Ignore forwarded messages
+    if message.forward_date:
+        return
+
+    reply = await message.reply_text(AUTO_REPLY_TEXT)
+
+    await asyncio.sleep(10)
+    await reply.delete()
+
     except:
         pass
             
