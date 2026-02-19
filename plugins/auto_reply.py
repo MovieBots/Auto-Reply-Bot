@@ -17,27 +17,25 @@ AUTO_REPLY_TEXT = "ʏօʊʀ ʍօʋɨɛ ɨռ ʍʏ քʀօʄɨʟɛ քʟɛǟֆɛ ƈ�
 @Client.on_message(filters.group)
 async def auto_reply(client, message):
 
+    # Ignore service messages
     if not message.from_user:
         return
 
     me = await client.get_me()
 
-    # Ignore your own messages
+    # Ignore yourself
     if message.from_user.id == me.id:
         return
 
-    # Ignore outgoing messages (line se bheja hua msg)
-    if message.outgoing:
-        return
-
-    # Ignore forwarded messages
-    if message.forward_date:
+    # Ignore bots (IMPORTANT FIX)
+    if message.from_user.is_bot:
         return
 
     reply = await message.reply_text(AUTO_REPLY_TEXT)
 
     await asyncio.sleep(10)
     await reply.delete()
+
 
     except:
         pass
