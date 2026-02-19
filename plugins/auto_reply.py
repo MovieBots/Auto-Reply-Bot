@@ -17,7 +17,6 @@ AUTO_REPLY_TEXT = "ʏօʊʀ ʍօʋɨɛ ɨռ ʍʏ քʀօʄɨʟɛ քʟɛǟֆɛ ƈ�
 @Client.on_message(filters.group)
 async def auto_reply(client, message):
 
-    # Ignore service messages
     if not message.from_user:
         return
 
@@ -27,16 +26,17 @@ async def auto_reply(client, message):
     if message.from_user.id == me.id:
         return
 
-    # Ignore bots (IMPORTANT FIX)
+    # Ignore bots
     if message.from_user.is_bot:
         return
 
-    reply = await message.reply_text(AUTO_REPLY_TEXT)
+    try:
+        reply = await message.reply_text(AUTO_REPLY_TEXT)
 
-    await asyncio.sleep(10)
-    await reply.delete()
+        await asyncio.sleep(20)
+        await reply.delete()
 
+    except Exception as e:
+        print("Delete Error:", e)
 
-    except:
-        pass
             
