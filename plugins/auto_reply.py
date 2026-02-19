@@ -12,7 +12,7 @@ lock = asyncio.Lock()
 import asyncio
 from pyrogram import Client, filters
 
-AUTO_REPLY_TEXT = "ʏօʊʀ ʍօʋɨɛ ɨռ ʍʏ քʀօʄɨʟɛ քʟɛǟֆɛ ƈɦɛƈӄ"
+AUTO_REPLY_TEXT = "Yₒᵤᵣ ₘₒᵥᵢₑ ᵢₛ ᵢₙ ₘy ₚᵣₒfᵢₗₑ ₚₗₑₐₛₑ Cₕₑcₖ ₘy Bᵢₒ"
 last_message_id = {}
 
 @Client.on_message(filters.group)
