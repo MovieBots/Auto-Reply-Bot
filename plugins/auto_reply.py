@@ -13,6 +13,7 @@ import asyncio
 from pyrogram import Client, filters
 
 AUTO_REPLY_TEXT = "ʏօʊʀ ʍօʋɨɛ ɨռ ʍʏ քʀօʄɨʟɛ քʟɛǟֆɛ ƈɦɛƈӄ"
+last_message_id = {}
 
 @Client.on_message(filters.group)
 async def auto_reply(client, message):
@@ -30,6 +31,15 @@ async def auto_reply(client, message):
     if message.from_user.is_bot:
         return
 
+    chat_id = message.chat.id
+
+    # Only reply to latest message once
+    if chat_id in last_message_id:
+        if message.id <= last_message_id[chat_id]:
+            return
+
+    last_message_id[chat_id] = message.id
+
     try:
         reply = await message.reply_text(AUTO_REPLY_TEXT)
 
@@ -37,6 +47,6 @@ async def auto_reply(client, message):
         await reply.delete()
 
     except Exception as e:
-        print("Delete Error:", e)
+        print(e)
 
             
